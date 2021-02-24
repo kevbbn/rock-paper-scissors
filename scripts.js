@@ -14,37 +14,39 @@ function computerPlay(){ // randomly returns rock paper or scissors
 function playRound(e) {
     let computerSelection = computerPlay(); 
     let playerSelection = e.toElement.id;
+    let result = ""
     if(playerSelection==computerSelection){
-        console.log("Tie! No one wins!");
+        result = "Tie! No one wins!"
     }
     else if(playerSelection=="rock"){
         if(computerSelection=="scissors"){ // rock wins (player)
-            console.log("You win! Rock beats scissors!");
+            result = "You win! Rock beats scissors!";
+
             playerScore++;
         }
         else{ // paper wins (computer)
-            console.log("You lose! Paper beats rock!");
+            result = "You lose! Paper beats rock!";
             computerScore++;
         }
 
     }
     else if(playerSelection=="paper"){
         if(computerSelection=="scissors"){ // scissor wins (computer)
-            console.log("You lose! Scissors beats paper!");
+            result = "You lose! Scissors beats paper!";
             computerScore++;
         }
         else{ // paper wins (player)
-            console.log("You win! Paper beats rock");
+            result = "You win! Paper beats rock";
             playerScore++;
         }
     }
     else if(playerSelection=="scissors"){ // player selection == scissors
         if(computerSelection=="rock"){ // rock wins (computer)
-            console.log("You lose! Rock beats scissors!");
+            result = "You lose! Rock beats scissors!";
             computerScore++;
         }
         else{ // scissors wins (player)
-            console.log("You win! Scissors beats paper!");
+            result = "You win! Scissors beats paper!";
             playerScore++;
         }
     }
@@ -53,6 +55,7 @@ function playRound(e) {
     }
     playerScoreHTML.innerHTML = `Score: ${playerScore}`;
     computerScoreHTML.innerHTML = `Score: ${computerScore}`;
+    resultHTML.innerHTML = result;
 }
 
 const playerChoices = document.querySelectorAll('.playerChoice');
@@ -61,4 +64,5 @@ let playerScore = 0;
 let computerScore = 0;
 let playerScoreHTML = document.getElementById("player-score");
 let computerScoreHTML = document.getElementById("computer-score");
+let resultHTML = document.getElementById("result");
 
