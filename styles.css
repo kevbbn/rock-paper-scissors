@@ -56,12 +56,38 @@ h1{
     box-shadow: 5px 5px 8px rgba(114, 114, 114, 0.4);
 }
 
+.container{
+    border-style: solid;
+    border-radius: 3%;
+    box-shadow: 5px 5px 8px rgba(114, 114, 114, 0.4);
+}
+
 .choice:hover{
     transform: scale(1.1);
 }
 
+.win{
+    border-color: rgb(36, 255, 55);
+    box-shadow: 5px 5px 8px rgba(36, 255, 55, 0.4);
+}
+
+.lose{
+    border-color: rgb(255, 24, 24);
+    box-shadow: 5px 5px 8px rgba(255, 24, 24, 0.4);
+}
+
+.tie{
+    border-color: rgb(255, 232, 24);
+    box-shadow: 5px 5px 8px rgba(255, 232, 24, 0.4);
+}
+
+.main-container{
+    padding-top: 30px;
+}
+
 #result{
     text-align: center;
+    margin-top: 100px;
 }
 
 footer {
