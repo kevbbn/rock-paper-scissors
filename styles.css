@@ -49,6 +49,15 @@ h1{
 .choice{
     justify-self: center;
     align-self: center;
+    border-color: black;
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 8px rgba(114, 114, 114, 0.4);
+}
+
+.choice:hover{
+    transform: scale(1.1);
 }
 
 #result{
