@@ -22,8 +22,8 @@ h1{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 25% 25% 50%;
     grid-template-areas:
-        ". name ."
-        ". score ."
+        "name name name"
+        "score score score"
         "rock paper scissors";
 }
 .name{
@@ -32,6 +32,7 @@ h1{
     align-self: center;
 }
 .score{
+    
     grid-area: score;
     justify-self: center;
     align-self: center;
